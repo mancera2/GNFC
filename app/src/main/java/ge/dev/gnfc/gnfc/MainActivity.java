@@ -16,9 +16,13 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Drawer result = new DrawerBuilder()
+        new DrawerBuilder()
                 .withActivity(this)
+                .withToolbar(toolbar)
                 .build();
+
+
     }
+
 
 }
