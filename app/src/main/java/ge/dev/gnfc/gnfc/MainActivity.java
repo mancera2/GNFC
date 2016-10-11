@@ -2,7 +2,9 @@ package ge.dev.gnfc.gnfc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
+import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,6 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new DrawerBuilder().withActivity(this).build();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        Drawer result = new DrawerBuilder()
+                .withActivity(this)
+                .build();
     }
+
 }
